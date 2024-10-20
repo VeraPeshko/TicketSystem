@@ -1,0 +1,28 @@
+﻿@model Ticket
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Ticket</title>
+</head>
+<body>
+    <h1>Buy Ticket</h1>
+    <form asp-action="BuyTicket" method="post">
+        <div>
+            <label>Journey ID:</label>
+            <input type="text" name="journeyId" value="@Model?.JourneyId" />
+        </div>
+        <div>
+            <label>Passenger ID:</label>
+            <input type="text" name="passengerId" value="@Model?.PassengerId" />
+        </div>
+        <div>
+            <label>Price:</label>
+            <input type="text" name="price" value="@Model?.Price" />
+        </div>
+        <button type="submit">Купить билет</button>
+    </form>
+</body>
+</html>
+

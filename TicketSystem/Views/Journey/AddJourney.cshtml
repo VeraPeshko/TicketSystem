@@ -1,0 +1,29 @@
+﻿@model Journey
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Journey</title>
+</head>
+<body>
+    <h1>Add Journey</h1>
+    <form asp-action="AddJourney" method="post">
+        
+        <div>
+            <label>Train:</label>
+            <select asp-for="TrainId" asp-items="ViewBag.Trains"></select>
+        </div>
+        <div>
+            <label>Departure Time:</label>
+            <input type="datetime-local" name="DepartureTime" value="@Model?.DepartureTime" />
+        </div>
+        <div>
+            <label>Arrival Time:</label>
+            <input type="datetime-local" name="ArrivalTime" value="@Model?.ArrivalTime" />
+        </div>
+        <button type="submit">Add Journey</button>
+    </form>
+</body>
+</html>
+

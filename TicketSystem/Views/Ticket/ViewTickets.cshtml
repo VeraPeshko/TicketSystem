@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Ticket>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Tickets</title>
+</head>
+<body>
+    <h2>My Tickets</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Train Number</th>
+                <th>Route</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ticket in Model)
+            {
+                <tr>
+                    <td>@ticket.Journey.Train.TrainNumber</td>
+                   
+                    <td>@ticket.Journey.DepartureTime</td>
+                    <td>@ticket.Journey.ArrivalTime</td>
+                    <td>@ticket.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+
+

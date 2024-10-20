@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Train>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Trains</title>
+</head>
+<body>
+    <h1>All Trains</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Train Number</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var train in Model)
+            {
+                <tr>
+                    <td>@train.Id</td>
+                    <td>@train.TrainNumber</td>
+                    <td>@train.Route</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+
